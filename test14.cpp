@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	
+	int id;
+	string name, gender;
+	string email;
+	string position;
+	float salary;
+	int bouns;
+	double total_salary;
+	
+	cout<<"\n";
+	cout<<"<=========Input Data=========>\n";
+	cout<<"\n";
+	cout<<"Enter ID      :";cin>>id;
+	cout<<"Enter Name    :";cin>>name;
+	cout<<"Enter Gender  :";cin>>gender;
+	cout<<"Enter Email   :";cin>>email;
+	cout<<"Enter Position:";cin>>position;
+	cout<<"Enter Salary  :";cin>>salary;
+	cout<<"Enter Bouns   :"<<"$";cin>>bouns;
+	
+	if(position == "IT"){
+		bouns = 30;
+	}else if(position =="Manager"){
+		bouns = 25;
+	}else if(position == "Engineer"){
+		bouns = 30;
+	}else{
+		bouns = 15;
+	}
+	
+	total_salary=salary+(salary*bouns)/100;
+	
+	cout<<"\n";
+	cout<<"<========Output Data=========>\n";
+	cout<<"\n";
+	cout<<"ID          :"<<id<<endl;
+	cout<<"Name        :"<<name<<endl;
+	cout<<"Gender      :"<<gender<<endl;
+	cout<<"Email       :"<<email<<endl;
+	cout<<"Position    :"<<position<<endl;
+	cout<<"Salary      :"<<salary<<"$"<<endl;
+	cout<<"Bouns       :"<<bouns<<"%"<<endl;
+	cout<<"Total salary:"<<total_salary<<endl;
+	return 0;
+}
